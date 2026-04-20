@@ -1,0 +1,6 @@
+framework module GMYFAdapter {
+  umbrella header "GMYFAdapter.h"
+  export *
+
+  module * { export * }
+}
