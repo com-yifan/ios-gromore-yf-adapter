@@ -1,0 +1,1 @@
+pod trunk push GMYFAdapter.podspec --allow-warnings --skip-tests --verbose --skip-import-validation --synchronous

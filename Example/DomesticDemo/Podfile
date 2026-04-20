@@ -1,0 +1,68 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+workspace 'BUADDemo.xcworkspace'
+
+abstract_target 'Demo' do
+    pod 'AFNetworking', '~> 3.0', :subspecs => ['UIKit'], :inhibit_warnings => false
+    pod 'Masonry'
+    pod 'MBProgressHUD'
+    pod 'MJRefresh'
+    pod 'SDWebImage'
+
+    target 'BUADDemo' do
+      project 'BUADDemo.xcodeproj'
+      # 本target相较于BUADDemo Target多了聚合维度功能展示
+      
+      
+      
+      # 包含Ads-CN的依赖和demo接入代码
+      pod 'BUDemoSource', :path => '../'
+      
+      
+# gromore亿帆适配器
+pod 'GMYFAdapter','6.1.0.0'    
+# 亿帆SDK【必须】
+pod 'YFAdsSDK/YFAdsSDK', '6.1.0.0'
+# 微信OpenSDK【必须】，如App内已通过其他方式集成OpenSDK，无需再次集成
+pod 'WechatOpenSDK-XCFramework'
+      
+      # 聚合维度其他家ADN的引入 版本支持请以”接入文档->前置说明“中为准，请不要更换GroMoreSDK不支持的三方sdk版本，引用了哪些adapter, 请相应地引入这些adapter对应的adn的广告SDK
+      # UnityAds
+      pod 'UnityAds', '4.3.0'
+      # Admob/GoogleAd
+      pod 'Google-Mobile-Ads-SDK', '10.0.0'
+      # 百度SDK
+#      pod 'BaiduMobAdSDK', '5.352'
+      # 广点通/优量汇
+#      pod 'GDTMobSDK', '4.14.80'
+      # SigmobAd
+      pod 'SigmobAd-iOS', '4.18.2'
+      # 快手
+#      pod 'KSAdSDK', '3.3.71'
+      # MintegralAdSDK 使用时请务必使用cocoapod源
+      pod 'MintegralAdSDK', '7.7.7', :subspecs => [
+        'SplashAd',
+        'NewInterstitialAd',
+        'InterstitialVideoAd',
+        'RewardVideoAd',
+        'NativeAd',
+        'NativeAdvancedAd',
+        'BannerAd',
+        'BidNativeAd',
+        'BidNewInterstitialAd',
+        'BidInterstitialVideoAd',
+        'BidRewardVideoAd'
+      ]
+
+  
+      end
+end
+
+post_install do |pi|
+    pi.pods_project.targets.each do |t|
+        t.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+        end
+    end
+end
