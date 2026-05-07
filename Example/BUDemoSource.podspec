@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
     
     ss.dependency 'BUDemoSource/CSJDemoSource'
     # ss.dependency 'BUDemoSource/MediationCustomAdapter'
-    ss.dependency 'BUDemoSource/YFGMCustomAdapter'
 
   end
   
@@ -62,13 +61,6 @@ Pod::Spec.new do |s|
     ss.dependency 'BUDemoSource/CSJRelateSDK'
   end
   
-  # 亿帆ADN相关代码
-  s.subspec 'YFGMCustomAdapter' do |ss|
-
-    ss.public_header_files = "YFGMCustomAdapter/**/*.h"
-    ss.source_files = "YFGMCustomAdapter/**/*.{h,m,a,c,mm,pch}"
-    ss.dependency 'YFAdsSDK'
-  end
 
   # Demo 需要的资源文件
   s.subspec 'CSJDemoResource' do |ss|

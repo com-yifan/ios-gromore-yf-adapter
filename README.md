@@ -1,10 +1,11 @@
-### 2. GroMore 自定义接入
+### 1. GroMore 自定义接入
 
 #### 1.1 参考文档
 
 - GroMore 自定义广告网络文档：<https://www.csjplatform.com/supportcenter/5878>
 - GroMore 自定义广告网络基类说明（iOS）：<https://www.csjplatform.com/union/media/union/download/detail?id=162&docId=27738&locale=zh-CN&osType=ios>
 - GroMore亿帆适配器Demo：https://github.com/com-yifan/ios-gromore-yf-adapter
+- 亿帆SDK对接文档：https://github.com/com-yifan/ios-yf-sdk
 
 #### 1.2 接入说明
 
@@ -24,7 +25,7 @@
 pod 'Ads-CN', '7.4.0.4', :subspecs => ['BUAdSDK','CSJMediation','BUAdLive-Framework']
 # GroMore 亿帆适配器
 pod 'GMYFAdapter'
-# 亿帆SDK 部分适配器导入可参考文档3.2章节
+# 亿帆SDK 部分适配器导入可参考亿帆对接文档3.2章节
 pod 'YFAdsSDK', '6.1.0.0'
 #  百度【必须】
 pod 'BaiduMobAdSDK','10.032'
