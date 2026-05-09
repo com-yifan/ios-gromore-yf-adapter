@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "GMYFAdapter"
-  s.version          = "6.1.1.1"
+  s.version          = "6.1.1.2"
   s.summary          = "GMYFAdapter for Gromore"
   s.description      = <<-DESC
   GMYFAdapter 提供YF广告适配支持。
