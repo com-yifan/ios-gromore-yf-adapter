@@ -23,7 +23,7 @@ abstract_target 'Demo' do
 # gromore亿帆适配器
 pod 'GMYFAdapter','6.1.1.1'    
 # 亿帆SDK【必须】
-pod 'YFAdsSDK/YFAdsSDK', '6.1.1.1'
+pod 'YFAdsSDK/YFAdsSDK', '6.1.2.0'
 # 微信OpenSDK【必须】，如App内已通过其他方式集成OpenSDK，无需再次集成
 pod 'WechatOpenSDK-XCFramework'
       
