@@ -74,14 +74,14 @@ Pod::Spec.new do |s|
   # 穿山甲相关的SDK
   s.subspec 'CSJRelateSDK' do |ss|
     configuration = 'Release'
-    ss.dependency 'Ads-CN/BUAdSDK','7.0.1.3'
-    ss.dependency 'Ads-CN/CSJMediation','7.0.1.3'
-    ss.dependency 'Ads-CN/BUAdLive-Framework','7.0.1.3'
+    ss.dependency 'Ads-CN/BUAdSDK','7.6.1.7'
+    ss.dependency 'Ads-CN/CSJMediation','7.6.1.7'
+    ss.dependency 'Ads-CN/BUAdLive-Framework','7.6.1.7'
     
     # Gromore-Adn适配器
-    ss.dependency 'GMBaiduAdapter', '5.39.0'
-    ss.dependency 'GMGdtAdapter', '4.15.40.2'
-    ss.dependency 'GMKsAdapter', '3.3.76.2'
+    ss.dependency 'GMBaiduAdapter', '10.050.0'
+    ss.dependency 'GMGdtAdapter', '4.15.80.1'
+    ss.dependency 'GMKsAdapter', '5.3.20.1.1'
 
   end
   
